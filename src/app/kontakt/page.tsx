@@ -12,6 +12,8 @@ export default function KontaktPage() {
           <li>
             <a
               href="https://www.linkedin.com/in/mira-olsson-b05970255/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-moss hover:underline"
             >
               LinkedIn
@@ -20,6 +22,8 @@ export default function KontaktPage() {
           <li>
             <a
               href="https://github.com/miralotta03"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-moss hover:underline"
             >
               GitHub
