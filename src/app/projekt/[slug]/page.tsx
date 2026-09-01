@@ -38,6 +38,7 @@ export default async function ProjectPage({
             <p className="text-ink-soft mb-1">Typ</p>
             <p>{project.year}</p>
           </div>
+          {project.figma && project.figma.length > 0 && (
           <div>
             <p className="text-ink-soft mb-1">Figma</p>
             <ul className="space-y-1">
@@ -55,6 +56,7 @@ export default async function ProjectPage({
               ))}
             </ul>
           </div>
+          )}
         </div>
       </div>
 

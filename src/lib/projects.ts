@@ -8,18 +8,23 @@ export type FigmaLink = {
   url: string;
 };
 
+export type ProjectCategory = "ux" | "kod" | "design";
+
 export type Project = {
   slug: string;
   title: string;
   year: string;
   role: string;
   tag: string;
+  category: ProjectCategory;
   summary: string;
   problem: string;
   process: string[];
   result: string;
   images: ProjectImage[];
-  figma: FigmaLink[];
+  figma?: FigmaLink[];
+  liveUrl?: string;
+  repoUrl?: string;
   ongoing?: boolean;
 };
 
@@ -30,6 +35,7 @@ export const projects: Project[] = [
     year: "Grupprojekt",
     role: "UX-design tillsammans med två andra — jag ansvarade för komponentbiblioteket och beställningsflödet",
     tag: "Matleverans-app",
+    category: "ux",
     summary:
       "En matleverans-app där vi designade hela kedjan från att bläddra bland restauranger till beställning, betalning och leveransspårning.",
     problem:
@@ -54,6 +60,7 @@ export const projects: Project[] = [
     year: "Grupprojekt",
     role: "UX-design och senare frontend-utveckling tillsammans med två andra",
     tag: "Smyckes-webbshop",
+    category: "ux",
     summary:
       "En webbshop för smycken, designad från lowfi-wireframes till en highfi-prototyp i både webb- och appformat — som vi senare kodade tillsammans.",
     problem:
@@ -83,6 +90,7 @@ export const projects: Project[] = [
     year: "Soloprojekt",
     role: "Egen redesign, från research till färdig prototyp",
     tag: "Redesign av förskolehemsida",
+    category: "ux",
     summary:
       "En redesign av en förskolas hemsida — jag tog en fullt fungerande men daterad sajt och byggde om den till en modern, tydligare version med samma innehåll.",
     problem:
@@ -109,6 +117,7 @@ export const projects: Project[] = [
     year: "Soloprojekt",
     role: "Egen design från idé till highfi",
     tag: "Webbshop, eget koncept",
+    category: "ux",
     summary:
       "Ett eget koncept för en webbshop med handgjord keramik, drivet av lowfi-wireframes som sedan highfi-designades för startsidan.",
     problem:
@@ -135,6 +144,7 @@ export const projects: Project[] = [
     year: "Soloprojekt — mitt första UX-projekt",
     role: "Egen design, första gången i Figma",
     tag: "Streaming-app",
+    category: "ux",
     summary:
       "En streaming-app för film, designad helt själv. Det första UX-projekt jag någonsin gjorde i Figma.",
     problem:
@@ -161,6 +171,7 @@ export const ongoingProject: Project = {
   year: "Pågående",
   role: "Eget projekt, under utveckling",
   tag: "Social kart-app",
+  category: "ux",
   summary:
     "En social map-app där du låser upp kartan i takt med att du reser — ett pågående eget projekt jag jobbar på just nu.",
   problem:
@@ -179,3 +190,39 @@ export const ongoingProject: Project = {
   ],
   ongoing: true,
 };
+
+// Kodprojekt — fyll i när Mira bestämt vilka repos/appar som ska med.
+// Exempel på hur ett objekt ska se ut:
+// {
+//   slug: "mitt-kodprojekt",
+//   title: "Mitt kodprojekt",
+//   year: "2026",
+//   role: "Frontend-utveckling, soloprojekt",
+//   tag: "Webbapp",
+//   category: "kod",
+//   summary: "Kort beskrivning av projektet.",
+//   problem: "Vad var utmaningen?",
+//   process: ["Steg 1", "Steg 2", "Steg 3"],
+//   result: "Vad blev resultatet?",
+//   images: [{ src: "/images/mitt-kodprojekt/overview.png", alt: "..." }],
+//   liveUrl: "https://...",
+//   repoUrl: "https://github.com/miralotta03/...",
+// },
+export const codeProjects: Project[] = [];
+
+// Grafisk design — fyll i när material samlats in.
+// Exempel på hur ett objekt ska se ut:
+// {
+//   slug: "min-design",
+//   title: "Min design",
+//   year: "2026",
+//   role: "Grafisk design, soloprojekt",
+//   tag: "Visuell identitet",
+//   category: "design",
+//   summary: "Kort beskrivning av projektet.",
+//   problem: "Vad var utmaningen?",
+//   process: ["Steg 1", "Steg 2", "Steg 3"],
+//   result: "Vad blev resultatet?",
+//   images: [{ src: "/images/min-design/overview.png", alt: "..." }],
+// },
+export const designProjects: Project[] = [];
