@@ -5,24 +5,24 @@ export default function KontaktPage() {
       <div className="max-w-xl space-y-4 text-ink-soft leading-relaxed">
         <ul className="space-y-2">
           <li>
-            <a href="mailto:din@mail.se" className="text-moss hover:underline">
+            <a href="mailto:miralotta03@hotmail.se" className="text-moss hover:underline">
               miralotta03@hotmail.se
             </a>
           </li>
           <li>
             <a
-              href="https://linkedin.com/in/ditt-namn"
+              href="https://www.linkedin.com/in/mira-olsson-b05970255/"
               className="text-moss hover:underline"
             >
-              https://www.linkedin.com/in/mira-olsson-b05970255/
+              LinkedIn
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/ditt-namn"
+              href="https://github.com/miralotta03"
               className="text-moss hover:underline"
             >
-              https://github.com/miralotta03
+              GitHub
             </a>
           </li>
         </ul>
