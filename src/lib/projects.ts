@@ -3,6 +3,11 @@ export type ProjectImage = {
   alt: string;
 };
 
+export type FigmaLink = {
+  label: string;
+  url: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -14,6 +19,7 @@ export type Project = {
   process: string[];
   result: string;
   images: ProjectImage[];
+  figma: FigmaLink[];
   ongoing?: boolean;
 };
 
@@ -37,6 +43,9 @@ export const projects: Project[] = [
       "En fullt klickbar prototyp som täcker hela resan från upptäckt till leverans, med ett återanvändbart komponentsystem som gjorde det möjligt för tre personer att designa i samma visuella språk.",
     images: [
       { src: "/images/dishdash/overview.png", alt: "Skärmar från DishDash: kontosidor, kategorisidor, beställningsflöde och orderspårning" },
+    ],
+    figma: [
+      { label: "Prototyp", url: "https://www.figma.com/design/0ojjuY6BqL6LOFDnPAHAaO/Untitled?node-id=0-1&m=dev&t=nZufYurTGegRy4te-1" },
     ],
   },
   {
@@ -62,6 +71,11 @@ export const projects: Project[] = [
       { src: "/images/melorie/desktop.png", alt: "Highfi desktop-skärmar för Melorie" },
       { src: "/images/melorie/mobile.png", alt: "Highfi mobilskärmar för Melorie, sida 1 till 9 av flödet" },
     ],
+    figma: [
+      { label: "Lowfi", url: "https://www.figma.com/design/Jny5w5Y8ckFlTPbwc2Aii8/Untitled?node-id=0-1&m=dev&t=q8X0kBsbOwxrNsmM-1" },
+      { label: "Highfi – webb", url: "https://www.figma.com/design/Jny5w5Y8ckFlTPbwc2Aii8/Untitled?node-id=128-16&m=dev&t=q8X0kBsbOwxrNsmM-1" },
+      { label: "Highfi – app", url: "https://www.figma.com/design/Jny5w5Y8ckFlTPbwc2Aii8/Untitled?node-id=219-61&m=dev&t=q8X0kBsbOwxrNsmM-1" },
+    ],
   },
   {
     slug: "villa-liljan",
@@ -83,6 +97,10 @@ export const projects: Project[] = [
     images: [
       { src: "/images/villaliljan/before.png", alt: "Villa Liljans hemsida innan redesign — samtliga sidor" },
       { src: "/images/villaliljan/after.png", alt: "Villa Liljans hemsida efter redesign — samtliga sidor" },
+    ],
+    figma: [
+      { label: "Before", url: "https://www.figma.com/design/eXRmGZjRgIZh77V7m5hDCn/Villa-L%C3%A4rkan-website?node-id=0-1&m=dev&t=QdrRuhvOwP2kNlLW-1" },
+      { label: "After", url: "https://www.figma.com/design/eXRmGZjRgIZh77V7m5hDCn/Villa-L%C3%A4rkan-website?node-id=40-188&m=dev&t=QdrRuhvOwP2kNlLW-1" },
     ],
   },
   {
@@ -106,6 +124,10 @@ export const projects: Project[] = [
       { src: "/images/keramik/lowfi.png", alt: "Lowfi-wireframes för keramik-webbshoppen" },
       { src: "/images/keramik/highfi.png", alt: "Highfi startsida för keramik-webbshoppen" },
     ],
+    figma: [
+      { label: "Lowfi", url: "https://www.figma.com/design/B36Xw9WT1pcDyaifdJZMBE/Untitled?node-id=0-1&m=dev&t=gwp8lW9LTbCzECHn-1" },
+      { label: "Highfi", url: "https://www.figma.com/design/B36Xw9WT1pcDyaifdJZMBE/Untitled?node-id=11-402&m=dev&t=gwp8lW9LTbCzECHn-1" },
+    ],
   },
   {
     slug: "b-movies",
@@ -126,6 +148,9 @@ export const projects: Project[] = [
       "Min första kompletta UX-prototyp — grunden som resten av mina projekt byggt vidare på. Jag tar med den för att visa var jag började.",
     images: [
       { src: "/images/bmovies/overview.png", alt: "B-movies streaming-app: bläddringsvy, meny, sökning och videospelare i flera skärmstorlekar" },
+    ],
+    figma: [
+      { label: "Prototyp", url: "https://www.figma.com/design/Rw3pOFHWhtUthiu8AOuL64/Video-stream-app?node-id=0-1&m=dev&t=AniBpPt86PhIYz69-1" },
     ],
   },
 ];
@@ -148,6 +173,9 @@ export const ongoingProject: Project = {
   result: "Fortfarande under arbete — kommer uppdateras här allt eftersom.",
   images: [
     { src: "/images/mappares/overview.png", alt: "Mappares: välkomstskärm, inloggning, kartvy, profil och flöde" },
+  ],
+  figma: [
+    { label: "Prototyp", url: "https://www.figma.com/design/HMfzQOneuDVKOhDfj5IWzS/Untitled?node-id=0-1&m=dev&t=jscP1VITlFTmy9Y1-1" },
   ],
   ongoing: true,
 };

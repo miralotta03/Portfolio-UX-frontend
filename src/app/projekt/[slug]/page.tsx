@@ -38,6 +38,23 @@ export default async function ProjectPage({
             <p className="text-ink-soft mb-1">Typ</p>
             <p>{project.year}</p>
           </div>
+          <div>
+            <p className="text-ink-soft mb-1">Figma</p>
+            <ul className="space-y-1">
+              {project.figma.map((link) => (
+                <li key={link.url}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-moss hover:underline"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
